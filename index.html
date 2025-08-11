@@ -3,133 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Taiyuan Gong</title>
-  <meta name="description" content="Taiyuan (Parker) Gong — PhD candidate. Edge Intelligence, VCTS, Generative AI for Railway." />
+  <title>Publications — Taiyuan (Parker) Gong</title>
+  <meta name="description" content="Auto-synced publications from Google Scholar for Taiyuan (Parker) Gong." />
   <link rel="icon" href="favicon.ico" />
   <style>
-    :root{
-      --bg:#fff;--text:#111827;--muted:#475569;--link:#0ea5e9;--border:#e5e7eb;--accent:#16a34a;
-    }
-    html,body{margin:0;padding:0}
-    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--text); background:var(--bg)}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1050px;margin:0 auto;padding:28px}
-    /* --- two-column layout like the reference site --- */
-    .grid{display:grid;grid-template-columns:260px 1fr;gap:28px}
-    @media(max-width:860px){.grid{grid-template-columns:1fr}}
-
-    /* left sidebar */
-    .card{border:1px solid var(--border); border-radius:12px; padding:18px}
-    .avatar{width:120px;height:120px;border-radius:8px;background:#f1f5f9;display:block;object-fit:cover;border:1px solid var(--border)}
-    h1{font-size:28px;line-height:1.2;margin:12px 0 2px}
-    .role{color:var(--muted);margin:0 0 8px}
-    .contact a{display:inline-block;margin-right:10px}
-    .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-    .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:2px 8px;border-radius:999px}
-
-    /* right content */
-    section{border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:18px}
-    h2{font-size:20px;margin:0 0 10px}
-    .pubs li{margin-bottom:10px}
-    .venue{font-style:italic;color:var(--muted)}
-    .news li{margin-bottom:6px}
-    .foot{color:var(--muted);font-size:14px;text-align:center;margin-top:20px}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:24px auto;max-width:900px;color:#0f172a;padding:0 16px}
+    a{color:#0ea5e9;text-decoration:none}a:hover{text-decoration:underline}
+    h1{margin:0 0 6px;font-size:28px}
+    .muted{color:#475569}
+    .toolbar{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
+    .year{margin-top:22px;font-weight:700;border-top:1px solid #e5e7eb;padding-top:10px}
+    ol{padding-left:22px}
+    li{margin:10px 0}
+    footer{margin-top:28px;color:#475569;font-size:14px}
+    .pill{display:inline-block;font-size:12px;border:1px solid #e5e7eb;border-radius:999px;padding:2px 8px;color:#475569;margin-left:8px}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="grid">
-      <!-- Left column -->
-      <aside class="card">
-        <img class="avatar" src="avatar.jpg" alt="Parker Gong" />
-        <h1>Taiyuan (Parker) Gong <span style="font-weight:400">龚泰源</span></h1>
-        <p class="role">PhD Candidate · Beijing Jiaotong University<br/>Visiting PhD (2024–2025), SUTD</p>
-        <p class="contact">
-          <a href="mailto:tygong@bjtu.edu.cn">Email</a>
-          <a href="https://github.com/ParkerGong">GitHub</a>
-          <a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">Scholar</a>
-        </p>
-        <div class="tags">
-          <span class="tag">Edge Intelligence</span>
-          <span class="tag">VCTS/Train Control</span>
-          <span class="tag">Reinforcement Learning</span>
-          <span class="tag">Diffusion Models</span>
-          <span class="tag">Multimodal Perception</span>
-        </div>
-      </aside>
-
-      <!-- Right column -->
-      <main>
-        <section id="about">
-          <h2>About</h2>
-          <p>
-            I am a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University. My research focuses on <b>edge intelligence</b>, <b>reinforcement learning</b>, and <b>generative AI</b> for railway control and perception (ATO/VCTS, train–edge cooperative computing). From 2024–2025 I am a CSC-funded visiting PhD at SUTD, advised by Prof. Zehui Xiong and Prof. Dusit Niyato.
-          </p>
-        </section>
-
-        <section id="news">
-          <h2>News</h2>
-          <ul class="news">
-            <li>[2025] Paper under revision at <b>IEEE TMC</b>: Edge-Intelligence Enhanced MCTS for VCTS Control.</li>
-            <li>[2024] Our work on train–edge cooperative perception appears in <b>IEEE TVT</b>.</li>
-            <li>[2023] Survey on edge intelligence in ITS published in <b>IEEE T-ITS</b>.</li>
-          </ul>
-        </section>
-
-        <section id="publications">
-          <h2>Selected Publications</h2>
-          <ul class="pubs">
-            <li>
-              <b>Gong, T.<b>, Zhu, L., Yu, F. R., & Tang, T. (2023). Edge intelligence in intelligent transportation systems: A survey.
-              <span class="venue">IEEE Transactions on Intelligent Transportation Systems, 2023, 24(9): 8919-8944.</span>
-              <!-- <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">DOI</a> -->
-            </li>
-            <li>
-              <b>Train-to-Edge Cooperative Intelligence for Obstacle Intrusion Detection in Rail Transit</b> — Taiyuan Gong, <i>et al.</i>
-              <span class="venue">IEEE Transactions on Vehicular Technology, 2024</span>
-            </li>
-            <li>
-              <b>Edge Intelligence in Intelligent Transportation Systems: A Survey</b> — Taiyuan Gong, <i>et al.</i>
-              <span class="venue">IEEE Transactions on Intelligent Transportation Systems, 2023</span>
-            </li>
-            <li>
-              <b>Collaborative Train and Edge Computing in Edge-Intelligence-based Train Autonomous Operation Control Systems</b> — Zhu L., <b>T. Gong</b>, <i>et al.</i>
-              <span class="venue">IEEE Transactions on Intelligent Transportation Systems, 2024</span>
-            </li>
-          </ul>
-          <p class="venue" style="margin-top:8px">Full list on <a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">Google Scholar</a>.</p>
-        </section>
-
-        <section id="projects">
-          <h2>Projects</h2>
-          <ul>
-            <li><b>PI</b> — Central Universities Basic Research: Edge-Intelligence-based Computing for Smart Train Driving (2023–2025).</li>
-            <li>Beijing NSF (Rail Transit Joint): Edge-cooperative general visual perception for urban rail and low-altitude environments (2024–2027).</li>
-            <li>Industry: ML-based autonomous driving model optimization (2024–2026).</li>
-            <li>Industry: Multidimensional perception & simulation platform for heavy-haul trains (2024–2026).</li>
-          </ul>
-        </section>
-
-        <section id="service">
-          <h2>Academic Service</h2>
-          <ul>
-            <li>Reviewer: T-ITS, TVT, TMC, TCCN, ICC, GLOBECOM, etc.</li>
-          </ul>
-        </section>
-
-        <section id="education">
-          <h2>Education</h2>
-          <ul>
-            <li>PhD (Direct), Traffic Information Engineering & Control — Beijing Jiaotong University, 2021–2026 (expected).</li>
-            <li>B.E., Automation — Beijing Jiaotong University, 2017–2021.</li>
-          </ul>
-        </section>
-
-        <div class="foot">© <span id="y"></span> Taiyuan (Parker) Gong · Last updated automatically.</div>
-      </main>
+  <header>
+    <h1>Publications</h1>
+    <div class="toolbar">
+      <a href="index.html">← Home</a>
+      <span class="pill">Auto-synced</span>
     </div>
+    <p class="muted">This page is automatically generated by a GitHub Action that fetches papers from Google Scholar (<a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">profile</a>). If you see only the placeholder below, the first sync hasn't run yet — it usually completes within a few minutes.</p>
+  </header>
+
+  <!--
+    NOTE:
+    This file is a starter placeholder for Scheme A.
+    The GitHub Action (scripts/fetch_scholar.py) will OVERWRITE this file
+    with the latest publications grouped by year. You don't need to edit it manually.
+  -->
+
+  <div id="placeholder">
+    <div class="year">Latest</div>
+    <ol>
+      <li><b>Loading from Google Scholar…</b> Please refresh later. (If this persists, check the Action logs.)</li>
+    </ol>
   </div>
+
+  <footer>
+    © <span id="y"></span> Taiyuan (Parker) Gong · Generated by GitHub Actions
+  </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
