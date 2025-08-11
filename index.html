@@ -8,39 +8,52 @@
   <link rel="icon" href="favicon.ico" />
   <style>
     :root{
-      --bg:#fff;--text:#111827;--muted:#475569;--link:#0ea5e9;--border:#e5e7eb;--accent:#16a34a;
+      --bg:#fff;--text:#111827;--muted:#475569;--link:#0ea5e9;--border:#e5e7eb;--chip:#f1f5f9;
     }
     html,body{margin:0;padding:0}
-    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--text); background:var(--bg)}
+    body{font:16.5px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg)}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:1050px;margin:0 auto;padding:28px}
-    /* --- two-column layout --- */
-    .grid{display:grid;grid-template-columns:260px 1fr;gap:28px}
-    @media(max-width:860px){.grid{grid-template-columns:1fr}}
+    /* 宽一点的版心 */
+    .wrap{max-width:1280px;margin:0 auto;padding:32px 28px}
+    /* 更宽的两栏布局：左 340px + 右自适应 */
+    .grid{display:grid;grid-template-columns:340px 1fr;gap:30px}
+    @media(max-width:980px){.grid{grid-template-columns:1fr}}
+    /* 卡片样式 */
+    .card, section{border:1px solid var(--border);border-radius:14px;background:#fff}
+    .card{padding:20px}
+    section{padding:20px;margin-bottom:20px}
+    /* 左侧个人卡片 */
+    .avatar{width:140px;height:140px;border-radius:10px;background:var(--chip);display:block;object-fit:cover;border:1px solid var(--border)}
+    h1{font-size:30px;line-height:1.25;margin:14px 0 2px}
+    .role{color:var(--muted);margin:0 0 10px}
+    .contact a{display:inline-block;margin-right:12px}
+    .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12.5px;color:var(--muted);border:1px solid var(--border);padding:3px 10px;border-radius:999px;background:#fff}
 
-    /* left sidebar */
-    .card{border:1px solid var(--border); border-radius:12px; padding:18px}
-    .avatar{width:120px;height:120px;border-radius:8px;background:#f1f5f9;display:block;object-fit:cover;border:1px solid var(--border)}
-    h1{font-size:28px;line-height:1.2;margin:12px 0 2px}
-    .role{color:var(--muted);margin:0 0 8px}
-    .contact a{display:inline-block;margin-right:10px}
-    .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-    .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:2px 8px;border-radius:999px}
-
-    /* right content */
-    section{border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:18px}
-    h2{font-size:20px;margin:0 0 10px}
-    .pubs li{margin-bottom:10px}
+    /* 右侧正文 */
+    h2{font-size:21px;margin:0 0 12px}
+    .news li{margin-bottom:8px}
+    .pubs li{margin-bottom:12px}
     .venue{font-style:italic;color:var(--muted)}
-    .news li{margin-bottom:6px}
-    .foot{color:var(--muted);font-size:14px;text-align:center;margin-top:20px}
+    .foot{color:var(--muted);font-size:14px;text-align:center;margin-top:24px}
+
+    /* 顶部导航（可选） */
+    .topnav{max-width:1280px;margin:0 auto;padding:10px 28px 0;display:flex;gap:16px;color:var(--muted)}
+    .topnav a{color:var(--muted)}
   </style>
 </head>
 <body>
+
+  <!-- 可选导航：主页 / Publications 自动页 -->
+  <div class="topnav">
+    <a href="./">Home</a>
+    <a href="publications.html">Publications (auto)</a>
+  </div>
+
   <div class="wrap">
     <div class="grid">
-      <!-- Left column -->
+      <!-- 左列：个人信息卡 -->
       <aside class="card">
         <img class="avatar" src="avatar.jpg" alt="Parker Gong" />
         <h1>Taiyuan (Parker) Gong <span style="font-weight:400">龚泰源</span></h1>
@@ -52,84 +65,92 @@
         </p>
         <div class="tags">
           <span class="tag">Edge Intelligence</span>
-          <span class="tag">VCTS/Train Control</span>
+          <span class="tag">VCTS / Train Control</span>
           <span class="tag">Reinforcement Learning</span>
           <span class="tag">Diffusion Models</span>
           <span class="tag">Multimodal Perception</span>
         </div>
       </aside>
 
-      <!-- Right column -->
+      <!-- 右列：正文 -->
       <main>
         <section id="about">
           <h2>About</h2>
           <p>
-            Taiyuan Gong is currently a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University. His research focuses on <b>edge intelligence</b>, <b>reinforcement learning</b>, and <b>generative AI</b> for railway control and perception (ATO/VCTS, train–edge cooperative computing). From 2024–2025 He is a CSC-funded visiting PhD at SUTD, advised by Prof. Zehui Xiong.
+            Taiyuan Gong is currently a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University. His research focuses on <b>edge intelligence</b>, <b>reinforcement learning</b>, and <b>generative AI</b> for railway control and perception (ATO/VCTS, train–edge cooperative computing). From 2024–2025 he is a CSC-funded visiting PhD at SUTD, advised by Prof. Zehui Xiong.
           </p>
         </section>
 
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news">
+            <li>[2025] Paper under revision at <b>IEEE TMC</b>: Edge-Intelligence Enhanced MCTS for VCTS Control.</li>
+            <li>[2024] Our work on train–edge cooperative perception appears in <b>IEEE TVT</b>.</li>
+            <li>[2023] Survey on edge intelligence in ITS published in <b>IEEE T-ITS</b>.</li>
+          </ul>
+        </section>
 
+        <!-- Publications（宽版 + 你的名字加粗） -->
         <section id="publications">
           <h2>Publications</h2>
           <ul class="pubs">
             <!-- 2025 -->
             <li>
-              [1] <b>T. Gong</b>, L. Zhu, Y. Li, S. Ma, F. R. Yu, and T. Tang, 
-              "Edge intelligence enhanced Monte Carlo tree search for virtually coupled train set optimal control," 
+              [1] <b>T. Gong</b>, L. Zhu, Y. Li, S. Ma, F. R. Yu, and T. Tang,
+              "Edge intelligence enhanced Monte Carlo tree search for virtually coupled train set optimal control,"
               <em>IEEE Transactions on Mobile Computing</em>, early access, 2025.
             </li>
             <li>
-              [2] L. Zhu, J. Miao, C. Chen, B. Yan, <b>T. Gong</b>, F. R. Yu, and T. Tang, 
-              "IRS-guided policy search in model based reinforcement learning for virtually coupled train sets control," 
+              [2] L. Zhu, J. Miao, C. Chen, B. Yan, <b>T. Gong</b>, F. R. Yu, and T. Tang,
+              "IRS-guided policy search in model based reinforcement learning for virtually coupled train sets control,"
               <em>Computers &amp; Industrial Engineering</em>, art. no. 111372, 2025.
             </li>
             <li>
-              [3] S. Ma, X. Qi, Z. Lou, H. Wang, L. Zhu, <b>T. Gong</b>, Y. Li, and H. Dong, 
-              "Stochastic game-based cross-layer defense scheme for jamming-resistant virtual coupled train sets," 
+              [3] S. Ma, X. Qi, Z. Lou, H. Wang, L. Zhu, <b>T. Gong</b>, Y. Li, and H. Dong,
+              "Stochastic game-based cross-layer defense scheme for jamming-resistant virtual coupled train sets,"
               <em>Transportation Research Part C: Emerging Technologies</em>, vol. 174, p. 105028, 2025.
             </li>
-        
+
             <!-- 2024 -->
             <li>
-              [4] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang, 
-              "Train-to-edge cooperative intelligence for obstacle intrusion detection in rail transit," 
+              [4] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang,
+              "Train-to-edge cooperative intelligence for obstacle intrusion detection in rail transit,"
               <em>IEEE Transactions on Vehicular Technology</em>, 2024.
             </li>
             <li>
-              [5] L. Zhu, <b>T. Gong</b>, S. Wei, and F. R. Yu, 
-              "Collaborative train and edge computing in edge intelligence based train autonomous operation control systems," 
+              [5] L. Zhu, <b>T. Gong</b>, S. Wei, and F. R. Yu,
+              "Collaborative train and edge computing in edge intelligence based train autonomous operation control systems,"
               <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2024.
             </li>
-        
+
             <!-- 2023 -->
             <li>
-              [6] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang, 
-              "Edge intelligence in intelligent transportation systems: A survey," 
+              [6] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang,
+              "Edge intelligence in intelligent transportation systems: A survey,"
               <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2023.
             </li>
             <li>
-              [7] L. Zhu, <b>T. Gong</b>, H. Liang, T. Tang, X. Wang, and H. Wang, 
-              "Application of edge intelligence in rail transit: Prospects and future outlook," 
+              [7] L. Zhu, <b>T. Gong</b>, H. Liang, T. Tang, X. Wang, and H. Wang,
+              "Application of edge intelligence in rail transit: Prospects and future outlook,"
               <em>Journal of Electronics &amp; Information Technology</em> (电子与信息学报), vol. 45, no. 4, pp. 1514–1528, 2023.
             </li>
-        
+
             <!-- 2022 -->
             <li>
-              [8] <b>T. Gong</b> and L. Zhu, 
-              "Edge intelligence-based obstacle intrusion detection in railway transportation," 
+              [8] <b>T. Gong</b> and L. Zhu,
+              "Edge intelligence-based obstacle intrusion detection in railway transportation,"
               in <em>Proc. IEEE Global Communications Conference (GLOBECOM)</em>, 2022, pp. 2981–2986.
             </li>
-        
+
             <!-- 2020 -->
             <li>
-              [9] <b>T. Gong</b>, F. Sang, T.-Y. Yang, and Z.-W. Chen, 
-              "Automatic trace recognition of ionogram with YOLOv3," 
-              in <em>Proc. IEEE Int. Conf. Consumer Electronics-Taiwan (ICCE-Taiwan)</em>, 2020, pp. 1–2.
+              [9] <b>T.-Y. Gong</b>, F. Sang, T.-Y. Yang, and Z.-W. Chen,
+              "Automatic trace recognition of ionogram with YOLOv3,"
+              in <em>Proc. IEEE Int. Conf. Consumer Electronics–Taiwan (ICCE-Taiwan)</em>, 2020, pp. 1–2.
             </li>
           </ul>
+          <p class="venue" style="margin-top:8px">Full auto-updated list: <a href="publications.html">publications.html</a>.</p>
         </section>
-
-
 
         <section id="projects">
           <h2>Projects</h2>
@@ -160,6 +181,7 @@
       </main>
     </div>
   </div>
+
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
