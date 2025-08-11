@@ -1,17 +1,182 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>YOUR NAME | Research</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taiyuan (Parker) Gong | Research</title>
+  <meta name="description" content="Research homepage of Taiyuan (Parker) Gong — PhD candidate at Beijing Jiaotong University. Research: Edge Intelligence, Reinforcement Learning, Generative AI for Railway, Train Control.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;        /* slate-900 */
+      --muted: #475569;       /* slate-600 */
+      --link: #0ea5e9;        /* sky-500 */
+      --chip: #f1f5f9;        /* slate-100 */
+      --card: #ffffff;
+      --border: #e2e8f0;      /* slate-200 */
+      --accent: #22c55e;      /* green-500 */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: var(--bg); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header { display: flex; align-items: center; gap: 18px; padding: 28px 0 8px; }
+    .avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--chip); display: grid; place-items: center; font-weight: 700; color: var(--muted); border: 1px solid var(--border); }
+    .title { flex: 1; }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0 0 6px; }
+    .subtitle { color: var(--muted); margin: 0; }
+    nav { margin: 12px 0 24px; display: flex; flex-wrap: wrap; gap: 10px 18px; }
+    nav a { color: var(--muted); font-weight: 600; }
+    section { padding: 20px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 22px; margin: 0 0 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { background: var(--chip); border: 1px solid var(--border); padding: 4px 10px; border-radius: 999px; font-size: 13px; color: var(--muted); }
+    ul { margin: 10px 0 0 20px; }
+    li + li { margin-top: 8px; }
+    .pubs li { margin-bottom: 10px; }
+    .pubs .venue { font-style: italic; color: var(--muted); }
+    .meta { color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .card { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: var(--card); }
+    footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 16px 0 40px; color: var(--muted); font-size: 14px; }
+    @media (max-width:560px){ .avatar{width:64px;height:64px} h1{font-size:26px} }
+  </style>
 </head>
 <body>
-  <h1>YOUR NAME</h1>
-  <p>PhD candidate @ XXX. Research: ATO, VCTS, Edge Intelligence, GAI for Railway...</p>
-  <ul>
-    <li><a href="papers.html">Publications</a></li>
-    <li><a href="cv.pdf">CV</a></li>
-    <li><a href="mailto:you@uni.edu">Email</a> | <a href="https://scholar.google.com/…">Google Scholar</a></li>
-  </ul>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="avatar" aria-hidden="true">TG</div>
+      <div class="title">
+        <h1>Taiyuan (Parker) Gong <span class="meta">龚泰源</span></h1>
+        <p class="subtitle">PhD Candidate, Beijing Jiaotong University · Visiting PhD (2024–2025), SUTD 🇸🇬</p>
+        <p class="subtitle">Edge Intelligence · Reinforcement Learning · Generative AI & LLMs for Railway · Train Control</p>
+        <p class="subtitle">
+          <strong>Email:</strong> <a href="mailto:tygong@bjtu.edu.cn">tygong@bjtu.edu.cn</a>
+          &nbsp;•&nbsp; <strong>GitHub:</strong> <a href="https://github.com/ParkerGong">ParkerGong</a>
+          &nbsp;•&nbsp; <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">Profile</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#honors">Honors</a>
+      <a href="#education">Education</a>
+      <a href="cv.pdf">CV (PDF)</a>
+    </nav>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University.
+        My research focuses on <strong>edge intelligence</strong>, <strong>reinforcement learning</strong>, and <strong>generative AI/LLMs</strong> for railway perception–control–computing systems (ATO/VCTS & cooperative train–edge computing).
+        From 2024.10 to 2025.10, I am a CSC-funded visiting PhD at the Singapore University of Technology and Design (SUTD), working with Prof. Zehui Xiong and Prof. Dusit Niyato.
+      </p>
+      <div class="chips" aria-label="keywords">
+        <span class="chip">Edge Intelligence</span>
+        <span class="chip">VCTS / Train Control</span>
+        <span class="chip">Reinforcement Learning</span>
+        <span class="chip">Diffusion Models</span>
+        <span class="chip">Multimodal Perception</span>
+      </div>
+    </section>
+
+    <!-- Research interests (compact) -->
+    <section id="research">
+      <h2>Selected Research</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 style="margin:6px 0 4px">Diffuser for Rail (D4R)</h3>
+          <p class="meta">One-shot full-trajectory generation for VCTS control under diffusion guidance.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin:6px 0 4px">Train–Edge Cooperative Perception</h3>
+          <p class="meta">Obstacle intrusion detection with train–edge collaboration and resource-aware scheduling.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin:6px 0 4px">Edge Intelligence in ITS</h3>
+          <p class="meta">Surveying computation–communication–control co-design at the network edge.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <strong>Edge Intelligence Enhanced Monte Carlo Tree Search for Virtually Coupled Train Set Optimal Control</strong> — Taiyuan Gong, <em>et al.</em>
+          <span class="venue">IEEE Transactions on Mobile Computing (TMC), 2025.</span>
+        </li>
+        <li>
+          <strong>Edge intelligence in intelligent transportation systems: A survey</strong> — Taiyuan Gong, <em>et al.</em>
+          <span class="venue">IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2023, 24(9): 8919–8944.</span>
+        </li>
+        <li>
+          <strong>Train-to-edge cooperative intelligence for obstacle intrusion detection in rail transit</strong> — Taiyuan Gong, <em>et al.</em>
+          <span class="venue">IEEE Transactions on Vehicular Technology (TVT), 2024, 73(6): 7669–7680.</span>
+        </li>
+        <li>
+          <strong>Collaborative train and edge computing in edge intelligence based train autonomous operation control systems</strong> — Zhu L., <strong>T. Gong</strong>, <em>et al.</em>
+          <span class="venue">IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2024.</span>
+        </li>
+        <li>
+          <strong>Edge intelligence-based obstacle intrusion detection in railway transportation</strong>
+          <span class="venue">IEEE GLOBECOM 2022: 2981–2986.</span>
+        </li>
+        <li>
+          <strong>边缘智能在轨道交通中的应用：前景与展望</strong>（中文） — 电子与信息学报, 2023, 45(04): 1514–1528.
+        </li>
+      </ul>
+      <p class="meta" style="margin-top:10px">More papers are under preparation/under review; full list on <a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">Google Scholar</a>.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>PI</strong> — Central Universities Basic Research: Edge-Intelligence-based Computing for Smart Train Driving, 2023–2025.</li>
+        <li>Beijing Natural Science Foundation (Rail Transit Joint): Edge-cooperative general visual perception for urban rail and low-altitude environments, 2024–2027.</li>
+        <li>Industry collaboration: Intelligent O&M for civil communication in rail transit (edge computing), 2023–2024.</li>
+        <li>Industry collaboration: Machine-learning based autonomous driving model optimization, 2024–2026.</li>
+        <li>Industry collaboration: Multidimensional perception & simulation platform for heavy-haul trains, 2024–2026.</li>
+        <li>Beijing Natural Science Foundation (Fengtai Frontier): Data-driven passenger flow prediction & dynamic train scheduling, 2023–2025.</li>
+      </ul>
+    </section>
+
+    <!-- Honors -->
+    <section id="honors">
+      <h2>Honors</h2>
+      <ul>
+        <li>National PhD Scholarship, 2024.</li>
+        <li>First-class PhD Scholarship, 2023.</li>
+        <li>Entrance PhD Scholarship, 2023.</li>
+        <li>National Master Scholarship, 2021.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>PhD (Direct)</strong>, Traffic Information Engineering & Control — Beijing Jiaotong University, 2021.09–2026.07.</li>
+        <li><strong>B.E.</strong>, Automation — Beijing Jiaotong University, 2017.09–2021.07.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Taiyuan (Parker) Gong. Last updated automatically.</div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
