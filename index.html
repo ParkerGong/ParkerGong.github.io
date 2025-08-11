@@ -14,16 +14,12 @@
     body{font:16.5px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg)}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    /* 宽一点的版心 */
     .wrap{max-width:1280px;margin:0 auto;padding:32px 28px}
-    /* 更宽的两栏布局：左 340px + 右自适应 */
     .grid{display:grid;grid-template-columns:340px 1fr;gap:30px}
     @media(max-width:980px){.grid{grid-template-columns:1fr}}
-    /* 卡片样式 */
     .card, section{border:1px solid var(--border);border-radius:14px;background:#fff}
     .card{padding:20px}
     section{padding:20px;margin-bottom:20px}
-    /* 左侧个人卡片 */
     .avatar{width:140px;height:140px;border-radius:10px;background:var(--chip);display:block;object-fit:cover;border:1px solid var(--border)}
     h1{font-size:30px;line-height:1.25;margin:14px 0 2px}
     .role{color:var(--muted);margin:0 0 10px}
@@ -31,21 +27,19 @@
     .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
     .tag{font-size:12.5px;color:var(--muted);border:1px solid var(--border);padding:3px 10px;border-radius:999px;background:#fff}
 
-    /* 右侧正文 */
     h2{font-size:21px;margin:0 0 12px}
-    .news li{margin-bottom:8px}
+    .list-tight li{margin-bottom:8px}
     .pubs li{margin-bottom:12px}
     .venue{font-style:italic;color:var(--muted)}
     .foot{color:var(--muted);font-size:14px;text-align:center;margin-top:24px}
 
-    /* 顶部导航（可选） */
     .topnav{max-width:1280px;margin:0 auto;padding:10px 28px 0;display:flex;gap:16px;color:var(--muted)}
     .topnav a{color:var(--muted)}
   </style>
 </head>
 <body>
 
-  <!-- 可选导航：主页 / Publications 自动页 -->
+  <!-- Top Nav -->
   <div class="topnav">
     <a href="./">Home</a>
     <a href="publications.html">Publications (auto)</a>
@@ -53,13 +47,14 @@
 
   <div class="wrap">
     <div class="grid">
-      <!-- 左列：个人信息卡 -->
+      <!-- Left column -->
       <aside class="card">
         <img class="avatar" src="avatar.jpg" alt="Parker Gong" />
         <h1>Taiyuan (Parker) Gong <span style="font-weight:400">龚泰源</span></h1>
         <p class="role">PhD Candidate · Beijing Jiaotong University<br/>Visiting PhD (2024–2025), SUTD</p>
         <p class="contact">
           <a href="mailto:tygong@bjtu.edu.cn">Email</a>
+          <a href="https://github.com/ParkerGong">GitHub</a>
           <a href="https://scholar.google.com/citations?user=nAjSpe0AAAAJ">Scholar</a>
         </p>
         <div class="tags">
@@ -71,142 +66,121 @@
         </div>
       </aside>
 
-      <!-- 右列：正文 -->
+      <!-- Right column -->
       <main>
-        <section id="about">
-          <h2>About</h2>
+        <!-- Bio -->
+        <section id="bio">
+          <h2>Bio</h2>
           <p>
-            Taiyuan Gong is currently a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University. His research focuses on <b>edge intelligence</b>, <b>reinforcement learning</b>, and <b>generative AI</b> for railway control and perception (ATO/VCTS, train–edge cooperative computing). From 2024–2025 he is a CSC-funded visiting PhD at SUTD, advised by Prof. Zehui Xiong.
+            <b>Taiyuan (Parker) Gong</b> is a PhD candidate at the Advanced National Key Lab of Autonomous Operation for Railway Systems, Beijing Jiaotong University (BJTU). His research focuses on <b>edge intelligence</b>, <b>reinforcement learning</b>, and <b>generative AI/LLMs</b> for railway perception–control–computing systems (ATO/VCTS &amp; train–edge cooperative computing).
           </p>
         </section>
 
+        <!-- Education -->
+        <section id="education">
+          <h2>Education</h2>
+          <ul class="list-tight">
+            <li> <b>Beijing Jiaotong University (BJTU), China.</b></li>
+            - <b>Direct Ph.D.<b>, Traffic Information Engineering &amp; Control.
+            - Academic Advisor: Prof. Li Zhu, Prof. F.Richard Yu (IEEE Fellow).
+            - National PhD Scholarship (the highest honors)
+            <li> <b>Beijing Jiaotong University (BJTU), China.</b></li>
+            - <b>B.E.</b>, Automation.
+            - Postgraduate recommendation without entrance examination.
+          </ul>
+        </section>
 
-        <!-- Publications（宽版 + 你的名字加粗） -->
+        <!-- Visiting -->
+        <section id="visiting">
+          <h2>Visiting</h2>
+          <ul class="list-tight">
+            <li><b>Visiting PhD</b>, Singapore University of Technology and Design (SUTD), 2024–2025. </li>
+            - Academic Advisors: Prof. Zehui Xiong, Prof. Dusit Niyato (IEEE Fellow).
+          </ul>
+        </section>
+
+        <!-- Research Interests -->
+        <section id="interests">
+          <h2>Research Interests</h2>
+          <ul class="list-tight">
+            <li>Edge intelligence and train–edge cooperative computing for ATO/VCTS.</li>
+            <li>Reinforcement learning &amp; safety-constrained control for rail operations.</li>
+            <li>Generative AI for control and perception.</li>
+            <li>Multimodal perception for obstacle intrusion detection.</li>
+          </ul>
+        </section>
+
+        <!-- Publications (full author names, your name bold) -->
         <section id="publications">
           <h2>Publications</h2>
           <ul class="pubs">
             <!-- 2025 -->
             <li>
-              [1] <b>T. Gong</b>, L. Zhu, Y. Li, S. Ma, F. R. Yu, and T. Tang,
-              "Edge intelligence enhanced Monte Carlo tree search for virtually coupled train set optimal control,"
+              [1] <b>Taiyuan Gong</b>, Li Zhu, Yang Li, Shuomei Ma, F. Richard Yu, and Tao Tang,
+              “Edge intelligence enhanced Monte Carlo tree search for virtually coupled train set optimal control,”
               <em>IEEE Transactions on Mobile Computing</em>, early access, 2025.
             </li>
             <li>
-              [2] L. Zhu, J. Miao, C. Chen, B. Yan, <b>T. Gong</b>, F. R. Yu, and T. Tang,
-              "IRS-guided policy search in model based reinforcement learning for virtually coupled train sets control,"
+              [2] Li Zhu, Jia Miao, Cheng Chen, Baicheng Yan, <b>Taiyuan Gong</b>, F. Richard Yu, and Tao Tang,
+              “IRS-guided policy search in model based reinforcement learning for virtually coupled train sets control,”
               <em>Computers &amp; Industrial Engineering</em>, art. no. 111372, 2025.
             </li>
             <li>
-              [3] S. Ma, X. Qi, Z. Lou, H. Wang, L. Zhu, <b>T. Gong</b>, Y. Li, and H. Dong,
-              "Stochastic game-based cross-layer defense scheme for jamming-resistant virtual coupled train sets,"
+              [3] Shuomei Ma, Xiaozhi Qi, Zhijiang Lou, Hongwei Wang, Li Zhu, <b>Taiyuan Gong</b>, Yang Li, and Hairong Dong,
+              “Stochastic game-based cross-layer defense scheme for jamming-resistant virtual coupled train sets,”
               <em>Transportation Research Part C: Emerging Technologies</em>, vol. 174, p. 105028, 2025.
             </li>
 
             <!-- 2024 -->
             <li>
-              [4] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang,
-              "Train-to-edge cooperative intelligence for obstacle intrusion detection in rail transit,"
+              [4] <b>Taiyuan Gong</b>, Li Zhu, F. Richard Yu, and Tao Tang,
+              “Train-to-edge cooperative intelligence for obstacle intrusion detection in rail transit,”
               <em>IEEE Transactions on Vehicular Technology</em>, 2024.
             </li>
             <li>
-              [5] L. Zhu, <b>T. Gong</b>, S. Wei, and F. R. Yu,
-              "Collaborative train and edge computing in edge intelligence based train autonomous operation control systems,"
+              [5] Li Zhu, <b>Taiyuan Gong</b>, Siyu Wei, and F. Richard Yu,
+              “Collaborative train and edge computing in edge intelligence based train autonomous operation control systems,”
               <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2024.
             </li>
 
             <!-- 2023 -->
             <li>
-              [6] <b>T. Gong</b>, L. Zhu, F. R. Yu, and T. Tang,
-              "Edge intelligence in intelligent transportation systems: A survey,"
+              [6] <b>Taiyuan Gong</b>, Li Zhu, F. Richard Yu, and Tao Tang,
+              “Edge intelligence in intelligent transportation systems: A survey,”
               <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2023.
             </li>
             <li>
-              [7] L. Zhu, <b>T. Gong</b>, H. Liang, T. Tang, X. Wang, and H. Wang,
-              "Application of edge intelligence in rail transit: Prospects and future outlook,"
+              [7] Li Zhu, <b>Taiyuan Gong</b>, Hao Liang, Tao Tang, Xi Wang, and Hongwei Wang,
+              “Application of edge intelligence in rail transit: Prospects and future outlook,”
               <em>Journal of Electronics &amp; Information Technology</em> (电子与信息学报), vol. 45, no. 4, pp. 1514–1528, 2023.
             </li>
 
             <!-- 2022 -->
             <li>
-              [8] <b>T. Gong</b> and L. Zhu,
-              "Edge intelligence-based obstacle intrusion detection in railway transportation,"
-              in <em>Proc. IEEE Global Communications Conference (GLOBECOM)</em>, 2022, pp. 2981–2986.
+              [8] <b>Taiyuan Gong</b> and Li Zhu,
+              “Edge intelligence-based obstacle intrusion detection in railway transportation,”
+              in <em>Proceedings of the IEEE Global Communications Conference (GLOBECOM)</em>, 2022, pp. 2981–2986.
             </li>
 
             <!-- 2020 -->
             <li>
-              [9] <b>T.-Y. Gong</b>, F. Sang, T.-Y. Yang, and Z.-W. Chen,
-              "Automatic trace recognition of ionogram with YOLOv3,"
-              in <em>Proc. IEEE Int. Conf. Consumer Electronics–Taiwan (ICCE-Taiwan)</em>, 2020, pp. 1–2.
+              [9] <b>Tai-Yuan Gong</b>, Fan Sang, Tian-Yu Yang, and Zi-Wei Chen,
+              “Automatic trace recognition of ionogram with YOLOv3,”
+              in <em>Proceedings of the IEEE International Conference on Consumer Electronics – Taiwan (ICCE-Taiwan)</em>, 2020, pp. 1–2.
             </li>
           </ul>
-          <p class="venue" style="margin-top:8px">Full auto-updated list: <a href="publications.html">publications.html</a>.</p>
+          <p class="venue" style="margin-top:8px">
+            Full auto-updated list: <a href="publications.html">publications.html</a>.
+          </p>
         </section>
 
-        <section id="projects">
-          <h2>Projects</h2>
-        
-          <!-- PI Projects -->
-          <h3>Principal Investigator (PI) / 项目负责人</h3>
-          <ul>
-            <li>
-              <b>中央高校基本科研业务项目：</b>基于边缘智能的轨道交通智能驾驶计算方法研究，<b>2023–2025</b>.
-              <br>
-              <i>Fundamental Research Funds for the Central Universities:</i> Research on Intelligent Driving Computing Methods for Rail Transit Based on Edge Intelligence, <b>2023–2025</b>.
-            </li>
-          </ul>
-        
-          <!-- Key Contributor Projects -->
-          <h3>Key Contributor / 主要参与人</h3>
-           <!-- 2024 -->
-            <li>
-              <b>自然科学横向项目：</b>基于机器学习的自动驾驶模型的实现与优化，<b>2024–2026</b>.
-              <br>
-              <i>Industry-Academia Cooperation Project:</i> Implementation and Optimization of Autonomous Driving Models Based on Machine Learning, <b>2024–2026</b>.
-            </li>
-            <li>
-              <b>自然科学横向项目：</b>重载列车多维感知综合监测分析及仿真决策平台技术服务，<b>2024–2026</b>.
-              <br>
-              <i>Industry-Academia Cooperation Project:</i> Technical Service for Comprehensive Monitoring, Analysis, and Simulation Decision-Making Platform for Multi-Dimensional Perception of Heavy-Haul Trains, <b>2024–2026</b>.
-            </li>
-            <li>
-              <b>自然科学横向项目：</b>城轨车地异构通信下端边云协同机制与智能调配技术研究，<b>2024–2026</b>.
-              <br>
-              <i>Industry-Academia Cooperation Project:</i> Research on Edge-Cloud Collaboration Mechanism and Intelligent Scheduling Technology for Heterogeneous Train-Ground Communication in Urban Rail Transit, <b>2024–2026</b>.
-            </li>
-            <li>
-              <b>北京市自然基金“轨道交通联合”：</b>城市轨道交通及低空飞行环境的边缘协同通用视觉感知研究，<b>2024–2027</b>.
-              <br>
-              <i>Beijing Natural Science Foundation “Rail Transit Joint”:</i> Research on General Visual Perception for Urban Rail Transit and Low-Altitude Flight Environments Based on Edge Collaboration, <b>2024–2027</b>.
-            </li>
-          <ul>
-            <!-- 2023 -->
-            <li>
-              <b>自然科学横向项目：</b>基于边缘计算的轨道交通民用通信智能运维系统设计与开发，<b>2023–2024</b>.
-              <br>
-              <i>Industry-Academia Cooperation Project:</i> Design and Development of Intelligent Operation and Maintenance System for Rail Transit Civil Communication Based on Edge Computing, <b>2023–2024</b>.
-            </li>
-            <li>
-              <b>北京市自然基金会“丰台联合-前沿”：</b>数据驱动的轨道交通客流精准预测与列车运行动态调整方法，<b>2023–2025</b>.
-              <br>
-              <i>Beijing Natural Science Foundation “Fengtai Joint – Frontier”:</i> Data-Driven Methods for Accurate Passenger Flow Prediction and Dynamic Train Operation Adjustment in Rail Transit, <b>2023–2025</b>.
-            </li>
-          </ul>
-        </section>
-
-
-        <section id="service">
-          <h2>Academic Service</h2>
-          <ul>
-            <li>Reviewer: T-ITS, TVT, TMC, TCCN, ICC, GLOBECOM, etc.</li>
-          </ul>
-        </section>
-
-        <section id="education">
-          <h2>Education</h2>
-          <ul>
-            <li>PhD (Direct), Traffic Information Engineering & Control — Beijing Jiaotong University, 2021–2026 (expected).</li>
-            <li>B.E., Automation — Beijing Jiaotong University, 2017–2021.</li>
+        <!-- Awards -->
+        <section id="awards">
+          <h2>Awards</h2>
+          <ul class="list-tight">
+            <li>National PhD Scholarship, 2024.</li>
+            <li>First-class PhD Scholarship, 2023.</li>
+            <li>National Master Scholarship, 2021.</li>
           </ul>
         </section>
 
